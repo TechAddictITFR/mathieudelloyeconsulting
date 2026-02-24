@@ -1,0 +1,94 @@
+╔════════════════════════════════════════════════════════════════╗
+║                                                                ║
+║  ✅ MATHIEU DELLOYE - PORTFOLIO PRÊT POUR DÉPLOIEMENT         ║
+║                                                                ║
+╚════════════════════════════════════════════════════════════════╝
+
+📦 FICHIERS INCLUS:
+─────────────────────────────────────────────────────────────────
+✅ index.html                  - Page principale du portfolio
+✅ styles.css                  - Design & styling
+✅ script.js                   - Interactivité & animations
+✅ cv_mathieu_servicenow_1page.html - CV téléchargeable
+✅ README.md                   - Documentation
+✅ images/ (4 SVG)             - Images des expériences
+   ├── framatome.svg
+   ├── atos.svg
+   ├── devoteam.svg
+   └── adecco.svg
+
+📚 GUIDES DE DÉPLOIEMENT:
+─────────────────────────────────────────────────────────────────
+⚡ QUICK_START.md             - 5 étapes en 5 minutes (LISEZ D'ABORD)
+📖 DEPLOYMENT_GUIDE_FR.md     - Guide complet en français
+📖 DEPLOYMENT_GUIDE_EN.md     - Complete guide in English
+✅ DEPLOYMENT_CHECKLIST.md    - Checklist de vérification
+
+🎯 VOTRE DÉPÔT GITHUB:
+─────────────────────────────────────────────────────────────────
+Repository: https://github.com/TechAddictITFR/mathieudelloyeconsulting.git
+Future URL: https://techaddictitfr.github.io/mathieudelloyeconsulting/
+
+🚀 ÉTAPES RAPIDES:
+─────────────────────────────────────────────────────────────────
+1. Allez sur: https://github.com/TechAddictITFR/mathieudelloyeconsulting
+2. Cliquez "Add file" → "Upload files"
+3. Uploadez TOUS les fichiers (le ZIP est fourni pour facilité)
+4. Allez à Settings → Pages → Branch: main, Folder: /
+5. Attendez 1-2 min
+6. Visitez: https://techaddictitfr.github.io/mathieudelloyeconsulting/
+
+✨ PORTFOLIO FEATURES:
+─────────────────────────────────────────────────────────────────
+✅ Responsive Design (Desktop, Tablet, Mobile)
+✅ 4 Expériences avec images SVG
+✅ Timeline interactive
+✅ Skills grid
+✅ Projects showcase
+✅ Contact section
+✅ Smooth scrolling navigation
+✅ Mobile hamburger menu
+✅ Professional styling (Bleu/Rouge/Gris)
+✅ CV downloadable
+✅ Fast loading (zero dependencies)
+
+📊 CONTENU:
+─────────────────────────────────────────────────────────────────
+Hero:        13+ years • 20k+ users • €500k+ portfolio • 95% on-time
+About:       Professional summary + 4 key highlights
+Experience:  Framatome • ATOS • DEVOTEAM • ADECCO (avec images)
+Skills:      ServiceNow, Platform, AI, Data, Cloud, Agile
+Projects:    6 key achievements
+Contact:     Email, Phone, Location, Social links
+
+🎨 PERSONNALISATION (OPTIONNEL):
+─────────────────────────────────────────────────────────────────
+- Custom domain: Achetez un domaine et mappez-le (voir guides)
+- Couleurs: Modifiez :root dans styles.css
+- Contenu: Éditez les textes dans index.html
+- Images: Ajoutez vos propres SVG dans images/
+
+📱 À AJOUTER À VOTRE CV:
+─────────────────────────────────────────────────────────────────
+Portfolio: https://techaddictitfr.github.io/mathieudelloyeconsulting/
+
+📖 DOCUMENTATION:
+─────────────────────────────────────────────────────────────────
+Pour déployer: Lisez QUICK_START.md (5 minutes)
+Pour détails:  Lisez DEPLOYMENT_GUIDE_EN.md ou _FR.md
+Vérification:  Utilisez DEPLOYMENT_CHECKLIST.md
+
+🆘 SUPPORT:
+─────────────────────────────────────────────────────────────────
+GitHub Pages Docs: https://docs.github.com/en/pages
+Troubleshooting: Voir DEPLOYMENT_GUIDE_EN.md section "Troubleshooting"
+
+✅ STATUS: PRÊT POUR DÉPLOIEMENT
+─────────────────────────────────────────────────────────────────
+
+🚀 NEXT STEP: Lisez QUICK_START.md et commencez!
+
+═══════════════════════════════════════════════════════════════════
+Créé le: 24 Février 2025
+Portfolio v1.0 - ServiceNow ITSM & AI Product Owner
+═══════════════════════════════════════════════════════════════════

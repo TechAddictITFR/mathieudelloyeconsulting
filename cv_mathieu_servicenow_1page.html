@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mathieu Delloye - ServiceNow ITSM Product Owner</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        @page {
+            size: A4;
+            margin: 0;
+        }
+        
+        @media print {
+            body {
+                margin: 0;
+                padding: 0;
+            }
+            .page {
+                margin: 0;
+                padding: 0;
+                box-shadow: none;
+                page-break-after: avoid;
+            }
+        }
+        
+        html, body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.2;
+            color: #333;
+            background: #f0f0f0;
+            font-size: 7.5px;
+            -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
+        }
+        
+        .page {
+            width: 210mm;
+            height: 297mm;
+            background: white;
+            display: grid;
+            grid-template-columns: 1.6fr 1fr;
+            margin: 0 auto;
+        }
+        
+        /* LEFT COLUMN */
+        .left-column {
+            background: white;
+            padding: 14px 12px;
+            overflow-y: auto;
+        }
+        
+        /* RIGHT COLUMN - SIDEBAR */
+        .right-column {
+            background: #f0f0f0;
+            padding: 14px 10px;
+            overflow-y: auto;
+            border-left: 1px solid #ddd;
+        }
+        
+        /* HEADER */
+        .header {
+            background: linear-gradient(135deg, #1a5f7a 0%, #2b7a9b 100%);
+            color: white;
+            padding: 10px 12px;
+            margin: -14px -12px 8px -12px;
+            border-radius: 0;
+        }
+        
+        .header h1 {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 2px;
+            letter-spacing: -0.5px;
+        }
+        
+        .header .subtitle {
+            font-size: 8px;
+            font-weight: 500;
+            color: #fff;
+            margin-bottom: 6px;
+        }
+        
+        .header .contact {
+            font-size: 7px;
+            line-height: 1.3;
+            color: rgba(255,255,255,0.95);
+        }
+        
+        .header .contact div {
+            margin-bottom: 1px;
+        }
+        
+        /* SUMMARY */
+        .summary-box {
+            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+            padding: 7px;
+            border-radius: 3px;
+            margin-bottom: 8px;
+            font-size: 7px;
+            line-height: 1.3;
+            color: #1a5f7a;
+        }
+        
+        .summary-box strong {
+            color: #1565c0;
+            font-weight: 700;
+        }
+        
+        /* SECTION TITLES */
+        .section-title {
+            font-size: 8px;
+            font-weight: 700;
+            color: #1a5f7a;
+            margin-top: 7px;
+            margin-bottom: 4px;
+            border-bottom: 2px solid #ff6b6b;
+            padding-bottom: 2px;
+            display: inline-block;
+        }
+        
+        /* JOBS */
+        .job-entry {
+            margin-bottom: 6px;
+            page-break-inside: avoid;
+        }
+        
+        .job-entry-header {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 2px;
+        }
+        
+        .job-icon {
+            font-size: 16px;
+            margin-right: 6px;
+            margin-top: -2px;
+        }
+        
+        .job-header-text {
+            flex: 1;
+        }
+        
+        .job-title {
+            font-size: 7.8px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 0px;
+        }
+        
+        .job-company {
+            font-size: 7px;
+            font-weight: 700;
+            color: #ff6b6b;
+            margin-bottom: 1px;
+        }
+        
+        .job-period {
+            font-size: 6.5px;
+            color: #666;
+            margin-bottom: 2px;
+        }
+        
+        .job-details {
+            font-size: 7px;
+            line-height: 1.25;
+            color: #333;
+        }
+        
+        .job-details li {
+            margin-left: 12px;
+            margin-bottom: 1.5px;
+        }
+        
+        .job-details li::before {
+            content: "▸";
+            color: #1565c0;
+            font-weight: bold;
+            margin-right: 3px;
+            margin-left: -9px;
+        }
+        
+        /* ACHIEVEMENT CARDS */
+        .achievements-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4px;
+            margin-top: 6px;
+        }
+        
+        .achievement-card {
+            background: white;
+            padding: 5px;
+            border-radius: 3px;
+            border-left: 2.5px solid #ff6b6b;
+            page-break-inside: avoid;
+        }
+        
+        .achievement-card.blue {
+            border-left-color: #1565c0;
+        }
+        
+        .achievement-card .icon {
+            font-size: 14px;
+            margin-bottom: 2px;
+        }
+        
+        .achievement-card .title {
+            font-size: 7.2px;
+            font-weight: 700;
+            color: #1a5f7a;
+            margin-bottom: 2px;
+        }
+        
+        .achievement-card .description {
+            font-size: 6.5px;
+            line-height: 1.25;
+            color: #555;
+        }
+        
+        /* EDUCATION */
+        .education-item {
+            margin-bottom: 3px;
+            font-size: 7px;
+            page-break-inside: avoid;
+        }
+        
+        .education-title {
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 1px;
+        }
+        
+        .education-school {
+            font-size: 6.5px;
+            color: #666;
+        }
+        
+        /* SIDEBAR STYLES */
+        .sidebar-section {
+            margin-bottom: 9px;
+            page-break-inside: avoid;
+        }
+        
+        .sidebar-title {
+            font-size: 7.5px;
+            font-weight: 700;
+            color: #1a5f7a;
+            margin-bottom: 4px;
+            border-bottom: 2px solid #ff6b6b;
+            padding-bottom: 2px;
+        }
+        
+        .skill-category {
+            margin-bottom: 5px;
+            page-break-inside: avoid;
+        }
+        
+        .category-name {
+            font-size: 6.5px;
+            font-weight: 700;
+            color: #ff6b6b;
+            margin-bottom: 2px;
+        }
+        
+        .skills-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2px;
+        }
+        
+        .skill-tag {
+            background: #1565c0;
+            color: white;
+            padding: 1.5px 3px;
+            border-radius: 2px;
+            font-size: 6px;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+        
+        .language-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2px;
+            font-size: 6.5px;
+            padding-bottom: 1px;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .language-name {
+            font-weight: 600;
+        }
+        
+        .language-level {
+            background: #ff6b6b;
+            color: white;
+            padding: 1px 3px;
+            border-radius: 2px;
+            font-weight: 700;
+            font-size: 5.5px;
+        }
+        
+        .cert-item {
+            margin-bottom: 2px;
+            font-size: 6.5px;
+            page-break-inside: avoid;
+            padding-bottom: 2px;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .cert-name {
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 0px;
+        }
+        
+        .cert-org {
+            font-size: 6px;
+            color: #666;
+            margin-top: 0px;
+        }
+        
+        .hobbies {
+            font-size: 6.5px;
+            line-height: 1.4;
+            color: #333;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, #1a5f7a 0%, #2b7a9b 100%);
+            color: white;
+            padding: 6px;
+            border-radius: 3px;
+            font-size: 6px;
+            line-height: 1.25;
+            margin-top: 6px;
+            page-break-inside: avoid;
+        }
+        
+        .highlight-box .title {
+            font-weight: 700;
+            margin-top: 3px;
+            margin-bottom: 2px;
+            font-size: 6.5px;
+        }
+        
+        .highlight-box ul {
+            margin-left: 9px;
+        }
+        
+        .highlight-box li {
+            margin-bottom: 1px;
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <!-- LEFT COLUMN -->
+        <div class="left-column">
+            <div class="header">
+                <h1>Mathieu Delloye</h1>
+                <div class="subtitle">Innovation and AI senior Project Manager | Digital Transformation Leader</div>
+                <div class="contact">
+                    <div>✉️ <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="442925302c2d2131202128282b3d21272b2a373128302d2a230434362b302b2a6a2921">[email&#160;protected]</a> | 📞 +33(0)673993701 | +39 338 570 3988</div>
+                    <div>🔗 LinkedIn: Mathieu.delloye | 📍 Via Vecchia Solaro, 80053 Castellammare di Stabia NA, Italy</div>
+                    <div>🇫🇷 French National</div>
+                </div>
+            </div>
+            
+            <div class="summary-box">
+                <strong>AI & Data Project Manager | Agile Transformation Leader</strong><br><br>
+                Certified PSM1 Scrum Master with 13+ years leading AI/Data projects and digital transformation in critical sectors (nuclear, banking, HR, logistics). Proven expertise in AI infrastructure deployment (OpenAI, Azure OpenAI), data governance, and Agile methodologies. Currently managing AI development platform (Genialab) and pursuing International Master in AI. Track record of delivering complex projects with 95% on-time delivery, driving innovation while ensuring regulatory compliance (GDPR, nuclear safety standards).
+            </div>
+            
+            <!-- JOBS -->
+            <div class="section-title">PROFESSIONAL EXPERIENCE</div>
+            
+            <!-- FRAMATOME -->
+            <div class="job-entry">
+                <div class="job-entry-header">
+                    <div class="job-icon">🎯</div>
+                    <div class="job-header-text">
+                        <div class="job-title">Freelance Scrum Master & Proxy Product Owner</div>
+                        <div class="job-company">Framatome ( Direct Contract) | Nuclear Sector</div>
+                        <div class="job-period">Oct 2025 - Present | Castellammare di Stabia, Italy</div>
+                    </div>
+                </div>
+                <ul class="job-details">
+                    <li><strong>Genialab AI Infrastructure Project (OpenAI & Azure OpenAI):</strong> Project Manager for enterprise AI development platform. Planned and governed full project lifecycle from requirements to deployment. Coordinated IT delivery teams and business stakeholders, ensuring compliance with responsible AI principles</li>
+                    <li><strong>Devonway Maintenance MCO/MCS Platform ITSM with ServiceNow:</strong> Deployed comprehensive ServiceNow ITSM platform for Devonway maintenance operations covering Incident Management, Request Management, and Change Management for critical nuclear applications. Implemented SLA tracking, KPI monitoring and advanced workflow automation ensuring 99.5% platform availability and seamless MCO/MCS operations</li>
+                    <li><strong>Microsoft Power Platform Training Product:</strong> Proxy PO defining learning objectives, content roadmap and coordinating stakeholders for enterprise-wide platform adoption. Identified key areas where AI/automation brings business value</li>
+                    <li><strong>Angular Forms Solution - Radioprotection:</strong> Managed development of regulatory compliance solution using Angular with SurveyJS integration, ensuring alignment with legal requirements and data protection standards</li>
+                    <li><strong>UIPath Automation MES - Supervision:</strong> Led robotic automation supervision solution, prioritizing features for MES monitoring and process optimization. Delivered 70% reduction in testing time through intelligent automation</li>
+                    <li><strong>Agile/Scrum Methodology:</strong> Facilitated daily stand-ups, sprint planning, retrospectives for cross-functional teams (IT, data, legal, business) with 95% on-time delivery</li>
+                </ul>
+            </div>
+            
+            <!-- ATOS -->
+            <div class="job-entry">
+                <div class="job-entry-header">
+                    <div class="job-icon">👔</div>
+                    <div class="job-header-text">
+                        <div class="job-title">Senior Project Manager & Scrum Master</div>
+                        <div class="job-company">ATOS - Framatome Digital Factory | Nuclear Sector</div>
+                        <div class="job-period">2020 - Oct 2025 | Naples, Italy</div>
+                    </div>
+                </div>
+                <ul class="job-details">
+                    <li><strong>Devonway Migration & UI/UX Modernization:</strong> Led transition to modernized platform, improving user experience for 20,000+ users. Implemented user-centric UX best practices</li>
+                    <li><strong>ServiceNow ITSM Implementation for on-site activity management platform and Devonway Platform:</strong> Deployed comprehensive ITSM platform including Incident Management, request management for 20,000+ users</li>
+                    <li><strong>Devonway Digital Transformation & Data Analytics:</strong> Managed digital transformation for 20,000+ users with AI-driven automation and data integration. Created more than 30 apps, SSRS reports, REST API with IAM, Power BI dashboards and implemented UiPath & ELK-Kibana</li>
+                    <li><strong>AI Infrastructure Development:</strong> Designed and implemented enterprise AI infrastructure to accelerate AI-powered application development, increasing developer productivity +40%. Deployed ML pipelines, MLOps practices and established AI governance framework</li>
+                    <li><strong>AI-Powered Solutions Delivery:</strong> Led development of AI-based thermal modeling for nuclear applications using Python. Optimized algorithms reducing computation time by 50%, demonstrating practical AI business value</li>
+                    <li><strong>Agile Project Management:</strong> Managed €500k+ portfolio including AI, automation, and data projects. Coordinated multidisciplinary teams (IT, data scientists, business) ensuring budget compliance and timely delivery</li>
+                </ul>
+            </div>
+            
+            <!-- DEVOTEAM -->
+            <div class="job-entry">
+                <div class="job-entry-header">
+                    <div class="job-icon">📊</div>
+                    <div class="job-header-text">
+                        <div class="job-title">Quality Method Engineer & IT Process Manager - ServiceNow ITSM Specialist</div>
+                        <div class="job-company">DEVOTEAM - BPCE IT | IT Banking Sector</div>
+                        <div class="job-period">2017 - 2020 | Lyon, France</div>
+                    </div>
+                </div>
+                <ul class="job-details">
+                    <li><strong>Data-Driven Governance:</strong> Created Power BI dashboards and analytics solutions for KPI monitoring, proactive issue detection and data-driven decision making at executive level</li>
+                    <li><strong>ITSM Process Optimization:</strong> Deployed ServiceNow for 150+ service requests with process automation. Implemented data quality controls and continuous improvement initiatives achieving 98% satisfaction</li>
+                    <li><strong>Regulatory Compliance:</strong> Managed IT operations ensuring compliance with banking regulations, data protection standards and quality control processes</li>
+                </ul>
+            </div>
+            
+            <!-- ADECCO -->
+            <div class="job-entry">
+                <div class="job-entry-header">
+                    <div class="job-icon">📈</div>
+                    <div class="job-header-text">
+                        <div class="job-title">PMO Specialist - Portfolio Management</div>
+                        <div class="job-company">ADECCO GROUP - MODIS | HR Temp & Perm Contracts</div>
+                        <div class="job-period">2014 - 2017 | Lyon, France</div>
+                    </div>
+                </div>
+                <ul class="job-details">
+                    <li><strong>Complex Project Management:</strong> Supervised €30M+ IT/Data projects portfolio with financial governance and resource optimization. Managed 50+ concurrent projects ensuring budget, timeline and quality objectives</li>
+                    <li><strong>PMO Leadership & Best Practices:</strong> Trained 43 project managers on Prince2/PMP frameworks. Established PMO standards, documentation templates and project governance processes</li>
+                    <li><strong>Strategic Planning and Support:</strong> Created portfolio dashboards integrating ServiceNow and Clarity PPM and supporting +9000 users</li>
+                </ul>
+            </div>
+            
+            <!-- ACHIEVEMENT CARDS -->
+            <div class="achievements-grid">
+                <div class="achievement-card">
+                    <div class="icon">⚙️</div>
+                    <div class="title">ServiceNow ITSM Leadership</div>
+                    <div class="description">Led comprehensive ITSM implementation covering Incident Management, Problem Management, IMAC and Change Management for 150+ service requests in banking. Achieved 98% satisfaction through advanced SLA/KPI tracking and zero-downtime upgrades.</div>
+                </div>
+                
+                <div class="achievement-card blue">
+                    <div class="icon">🔧</div>
+                    <div class="title">Devonway Platform Modernization</div>
+                    <div class="description">Architected Devonway platform migration and UI/UX modernization for 20,000+ users. Developed 30+ applications with SSRS reports, REST APIs (IAM), Power BI dashboards and integrated comprehensive ITSM platform with UiPath & ELK-Kibana automation.</div>
+                </div>
+                
+                <div class="achievement-card blue">
+                    <div class="icon">🤖</div>
+                    <div class="title">AI Infrastructure Leadership</div>
+                    <div class="description">Led Genialab AI platform implementation using OpenAI and Azure OpenAI, enabling enterprise AI development. Designed ML pipelines and established AI governance framework, increasing developer productivity +40% while ensuring responsible AI compliance.</div>
+                </div>
+                
+                <div class="achievement-card">
+                    <div class="icon">📊</div>
+                    <div class="title">Data Governance & Analytics Excellence</div>
+                    <div class="description">Implemented comprehensive data governance frameworks ensuring data quality, security and integrity. Created Power BI analytics solutions and data catalogs supporting data-driven decision making for 20,000+ users across nuclear operations.</div>
+                </div>
+            </div>
+            
+            <!-- EDUCATION -->
+            <div style="margin-top: 6px;">
+                <div class="education-item">
+                    <div class="education-title">International Master in Artificial Intelligence (In Progress)</div>
+                    <div class="education-school">Rome Business School (Started Jan 2026)</div>
+                </div>
+                <div class="education-item">
+                    <div class="education-title">Master's Degree - Organizational Management & Industrial Project Management</div>
+                    <div class="education-school">ECEMA Business School (2014)</div>
+                </div>
+                <div class="education-item">
+                    <div class="education-title">Bachelor Degree - Logistics & Sales</div>
+                    <div class="education-school">Wesford Business School (2012)</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- RIGHT COLUMN - SIDEBAR -->
+        <div class="right-column">
+            <div class="sidebar-section">
+                <div class="sidebar-title">💡 Core Skills</div>
+                
+                <div class="skill-category">
+                    <div class="category-name">AI & Machine Learning</div>
+                    <div class="skills-tags">
+                        <span class="skill-tag">AI Infrastructure</span>
+                        <span class="skill-tag">OpenAI</span>
+                        <span class="skill-tag">Azure OpenAI</span>
+                        <span class="skill-tag">ML Pipelines</span>
+                        <span class="skill-tag">MLOps</span>
+                        <span class="skill-tag">Responsible AI</span>
+                        <span class="skill-tag">AI Governance</span>
+                        <span class="skill-tag">GenAI</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <div class="category-name">Data Management & Analytics</div>
+                    <div class="skills-tags">
+                        <span class="skill-tag">Data Governance</span>
+                        <span class="skill-tag">Data Quality</span>
+                        <span class="skill-tag">Data Stewardship</span>
+                        <span class="skill-tag">Data Lineage</span>
+                        <span class="skill-tag">Power BI</span>
+                        <span class="skill-tag">Data Warehousing</span>
+                        <span class="skill-tag">Data Integration</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <div class="category-name">Cloud & DevOps</div>
+                    <div class="skills-tags">
+                        <span class="skill-tag">Azure Cloud</span>
+                        <span class="skill-tag">AWS</span>
+                        <span class="skill-tag">GitHub</span>
+                        <span class="skill-tag">Azure DevOps</span>
+                        <span class="skill-tag">CI/CD</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <div class="category-name">Agile & Project Management</div>
+                    <div class="skills-tags">
+                        <span class="skill-tag">Agile/Scrum</span>
+                        <span class="skill-tag">PSM1 Certified</span>
+                        <span class="skill-tag">Prince2</span>
+                        <span class="skill-tag">Portfolio Management</span>
+                        <span class="skill-tag">Stakeholder Management</span>
+                        <span class="skill-tag">Budget €500k+</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <div class="category-name">Tools & Platforms</div>
+                    <div class="skills-tags">
+                        <span class="skill-tag">Jira</span>
+                        <span class="skill-tag">Power Platform</span>
+                        <span class="skill-tag">UiPath</span>
+                        <span class="skill-tag">ServiceNow</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Angular</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <div class="category-name">Compliance & Governance</div>
+                    <div class="skills-tags">
+                        <span class="skill-tag">GDPR</span>
+                        <span class="skill-tag">Regulatory Compliance</span>
+                        <span class="skill-tag">Nuclear Standards</span>
+                        <span class="skill-tag">Data Protection</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="sidebar-section">
+                <div class="sidebar-title">🌍 Languages</div>
+                <div class="language-item">
+                    <span>French</span>
+                    <span class="language-level">NATIVE</span>
+                </div>
+                <div class="language-item">
+                    <span>Italian</span>
+                    <span class="language-level">C2</span>
+                </div>
+                <div class="language-item">
+                    <span>English</span>
+                    <span class="language-level">C2</span>
+                </div>
+                <div class="language-item">
+                    <span>Spanish</span>
+                    <span class="language-level">C1</span>
+                </div>
+            </div>
+            
+            <div class="sidebar-section">
+                <div class="sidebar-title">🎓 Certifications</div>
+                <div class="cert-item">
+                    <div class="cert-name">🏆 Professional Scrum Master PSM1</div>
+                    <div class="cert-org">Scrum.org (2019)</div>
+                </div>
+                <div class="cert-item">
+                    <div class="cert-name">Prince2 Foundation</div>
+                    <div class="cert-org">AXELOS (2018)</div>
+                </div>
+                <div class="cert-item">
+                    <div class="cert-name">ITIL V3 Foundation</div>
+                    <div class="cert-org">AXELOS (2016)</div>
+                </div>
+                <div class="cert-item">
+                    <div class="cert-name">Power BI Fundamentals</div>
+                    <div class="cert-org">ORSYS (2019)</div>
+                </div>
+            </div>
+            
+            <div class="sidebar-section">
+                <div class="sidebar-title">🎯 Hobbies</div>
+                <div class="hobbies">🥋 Karate (brown belt) • 🥊 Wing Chun • 🧗 Climbing • 💻 Vibe coding</div>
+            </div>
+            
+            <div class="highlight-box">
+                <div class="title">🤖 AI & Data Expertise:</div>
+                <ul>
+                    <li>AI infrastructure deployment (OpenAI, Azure OpenAI) + ML pipelines + Responsible AI governance frameworks</li>
+                </ul>
+                <div class="title">📊 Data Governance Leadership:</div>
+                <ul>
+                    <li>Data quality management + Data stewardship + Data lineage + Regulatory compliance (GDPR, nuclear standards)</li>
+                </ul>
+                <div class="title">🎯 Project Management Excellence:</div>
+                <ul>
+                    <li>€500k+ AI/Data portfolio + Agile/Scrum certified + 95% on-time delivery + Multidisciplinary team leadership</li>
+                </ul>
+                <div class="title">🚀 Strategic Innovation:</div>
+                <ul>
+                    <li>AI adoption roadmap + Digital transformation at scale + Bus
