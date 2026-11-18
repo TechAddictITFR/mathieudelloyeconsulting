@@ -1,0 +1,58 @@
+{
+ "mis_a_jour": "2026-11-18",
+ "synthese": {
+  "formations": 3,
+  "heures_programmees": 54,
+  "heures_dispensees": 0,
+  "audits_realises": 2,
+  "secteurs": 3,
+  "automatisations": 4,
+  "automatisations_en_service": 1,
+  "editions_daily_ai": 13
+ },
+ "formations": [
+  {
+   "secteur": "Cabinet de conseil en management",
+   "theme": "Claude IA : analyser, sélectionner et répondre aux appels d'offres",
+   "heures": 14,
+   "seances": 4,
+   "etape": "Audit réalisé"
+  },
+  {
+   "secteur": "Éditeur de logiciels médias",
+   "theme": "Apprentissage automatique et indexation d'images et vidéos",
+   "heures": 14,
+   "seances": 4,
+   "etape": "Audit réalisé"
+  },
+  {
+   "secteur": "Société de conseil informatique",
+   "theme": "Agents IA, RAG et réglage fin",
+   "heures": 26,
+   "seances": 8,
+   "etape": "Programme en préparation"
+  }
+ ],
+ "automatisations": [
+  {
+   "nom": "Journal Daily AI",
+   "outil": "Claude Code",
+   "statut": "En service"
+  },
+  {
+   "nom": "Veille YouTube gouvernance IA",
+   "outil": "Trigger.dev",
+   "statut": "Construit"
+  },
+  {
+   "nom": "Veille appels d'offres",
+   "outil": "Claude Code, exécution locale",
+   "statut": "Prototype"
+  },
+  {
+   "nom": "Analyse concurrentielle formation IA",
+   "outil": "Claude Code",
+   "statut": "Prototype"
+  }
+ ]
+}

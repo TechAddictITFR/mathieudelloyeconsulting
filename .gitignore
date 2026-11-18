@@ -1,0 +1,8 @@
+.DS_Store
+.env
+.env.*
+*.mp4
+*.mov
+.tmp/
+node_modules/
+temporary screenshots/

@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self'; base-uri 'self'; form-action 'none'; object-src 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Mathieu Delloye Consulting · Diagnostic IA</title>
+  <meta name="description" content="Passez votre entreprise au scanner IA : un diagnostic en ligne en neuf questions, puis un parcours de formation, d'automatisation ou de pilotage sur mesure.">
+  <meta name="theme-color" content="#071528">
+  <link rel="icon" href="assets/logo-mdc.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/Inter-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/InstrumentSerif-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <script src="js/prefs-init.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <script type="module" src="js/main.js"></script>
+</head>
+<body>
+  <a class="skip" href="#diagnostic" data-i18n="skip">Aller au diagnostic</a>
+
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Mathieu Delloye Consulting, retour en haut" data-i18n-attr="aria-label:brand_aria">
+      <img src="assets/logo-mdc.svg" alt="" width="32" height="32">
+      <span>Mathieu Delloye <span class="brand-sub">Consulting</span></span>
+    </a>
+    <nav class="nav" aria-label="Navigation principale" data-i18n-attr="aria-label:nav_aria">
+      <a href="#diagnostic" data-i18n="nav_diag">Diagnostic</a>
+      <a href="#offres" data-i18n="nav_offers">Offres</a>
+      <a href="#preuves" data-i18n="nav_proof">Références</a>
+      <a href="#projets" data-i18n="nav_projects">Projets</a>
+    </nav>
+    <div class="header-actions">
+      <div class="a11y">
+        <button class="a11y-btn" type="button" id="a11y-toggle" aria-expanded="false" aria-controls="a11y-panel">
+          <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="7" r="1.3" fill="currentColor" stroke="none"/><path d="M7 10.2 12 11l5-.8M12 11v3.4m0 0-2.6 4.4M12 14.4l2.6 4.4"/></svg>
+          <span class="a11y-label" data-i18n="a11y_btn">Accessibilité</span>
+        </button>
+        <div class="a11y-panel" id="a11y-panel" role="region" aria-labelledby="a11y-title" hidden>
+          <p class="a11y-title" id="a11y-title" data-i18n="a11y_title">Réglages d'affichage</p>
+          <div class="a11y-group" role="group" aria-labelledby="a11y-g-theme">
+            <p id="a11y-g-theme" data-i18n="a11y_theme">Thème</p>
+            <div class="a11y-choices">
+              <button type="button" class="a11y-choice" data-pref="theme" data-value="auto" data-i18n="a11y_auto">Automatique</button>
+              <button type="button" class="a11y-choice" data-pref="theme" data-value="light" data-i18n="a11y_light">Clair</button>
+              <button type="button" class="a11y-choice" data-pref="theme" data-value="dark" data-i18n="a11y_dark">Sombre</button>
+            </div>
+          </div>
+          <div class="a11y-group" role="group" aria-labelledby="a11y-g-text">
+            <p id="a11y-g-text" data-i18n="a11y_text">Taille du texte</p>
+            <div class="a11y-choices">
+              <button type="button" class="a11y-choice" data-pref="text" data-value="normal" data-i18n="a11y_t1">Normale</button>
+              <button type="button" class="a11y-choice" data-pref="text" data-value="large" data-i18n="a11y_t2">Grande</button>
+              <button type="button" class="a11y-choice" data-pref="text" data-value="xlarge" data-i18n="a11y_t3">Très grande</button>
+            </div>
+          </div>
+          <div class="a11y-group" role="group" aria-labelledby="a11y-g-contrast">
+            <p id="a11y-g-contrast" data-i18n="a11y_contrast">Contraste</p>
+            <div class="a11y-choices">
+              <button type="button" class="a11y-choice" data-pref="contrast" data-value="normal" data-i18n="a11y_c1">Normal</button>
+              <button type="button" class="a11y-choice" data-pref="contrast" data-value="more" data-i18n="a11y_c2">Renforcé</button>
+            </div>
+          </div>
+          <div class="a11y-group" role="group" aria-labelledby="a11y-g-motion">
+            <p id="a11y-g-motion" data-i18n="a11y_motion">Animations</p>
+            <div class="a11y-choices">
+              <button type="button" class="a11y-choice" data-pref="motion" data-value="auto" data-i18n="a11y_m1">Normales</button>
+              <button type="button" class="a11y-choice" data-pref="motion" data-value="reduce" data-i18n="a11y_m2">Réduites</button>
+            </div>
+          </div>
+          <button type="button" class="btn-ghost a11y-reset" id="a11y-reset" data-i18n="a11y_reset">Réinitialiser</button>
+        </div>
+      </div>
+      <button class="lang" type="button" id="lang-toggle" aria-label="Switch to English" lang="en">EN</button>
+      <a class="btn btn-small js-booking" href="#contact" data-i18n="nav_book">Réserver un échange</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- Scan : la vidéo IRM avance au défilement -->
+    <section id="scan" class="scan" aria-labelledby="hero-title">
+      <div class="scan-sticky">
+        <canvas id="scan-canvas" aria-hidden="true"></canvas>
+        <div class="scan-shade" aria-hidden="true"></div>
+        <div class="hero-scrim" id="hero-scrim" aria-hidden="true"></div>
+        <div class="scan-loader" id="scan-loader" aria-hidden="true"><span id="scan-loader-bar"></span></div>
+
+        <div class="hero" id="hero">
+          <h1 id="hero-title" class="hero-title" data-i18n="hero_title">Passez votre entreprise au scanner&nbsp;IA.</h1>
+          <p class="hero-lead" data-i18n="hero_lead">Neuf questions, trois minutes. Vous voyez où l'IA peut faire gagner du temps à votre équipe, et par quoi commencer.</p>
+          <div class="hero-actions">
+            <a class="btn" href="#diagnostic" data-i18n="hero_cta">Lancer le diagnostic</a>
+            <span class="hero-hint" data-i18n="hero_hint">ou faites défiler pour voir le scan</span>
+          </div>
+          <p class="hero-who" data-i18n="hero_who">Mathieu Delloye, formateur et consultant en IA. 13 ans de gestion de projet IT dans le nucléaire, la banque et les ressources humaines.</p>
+        </div>
+
+        <ol class="phases" aria-label="Les trois temps du diagnostic" data-i18n-attr="aria-label:phases_aria">
+          <li class="phase" data-from="0.18" data-to="0.42">
+            <span class="phase-n">1</span>
+            <h2 data-i18n="p1_t">Observer vos usages</h2>
+            <p data-i18n="p1_d">Qui utilise l'IA, pour quoi faire, avec quelles règles.</p>
+          </li>
+          <li class="phase" data-from="0.42" data-to="0.66">
+            <span class="phase-n">2</span>
+            <h2 data-i18n="p2_t">Lire vos processus</h2>
+            <p data-i18n="p2_d">Les tâches répétitives, les données dispersées, les outils qui ne se parlent pas.</p>
+          </li>
+          <li class="phase" data-from="0.66" data-to="1.01">
+            <span class="phase-n">3</span>
+            <h2 data-i18n="p3_t">Révéler le potentiel</h2>
+            <p data-i18n="p3_d">Un parcours concret&nbsp;: former, automatiser, piloter.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Diagnostic en ligne -->
+    <section id="diagnostic" class="section diag" aria-labelledby="diag-title">
+      <div class="wrap diag-grid">
+        <div class="diag-panel">
+          <h2 id="diag-title" class="h2" data-i18n="diag_title">Le diagnostic en ligne</h2>
+          <p class="lead" data-i18n="diag_lead">Répondez au plus près de votre réalité. Vos réponses restent dans votre navigateur&nbsp;: rien n'est envoyé.</p>
+
+          <form id="diag-form" class="quiz" novalidate>
+            <p class="quiz-progress" id="quiz-progress" aria-live="polite"></p>
+            <fieldset class="quiz-q">
+              <legend id="quiz-question"></legend>
+              <div id="quiz-options" class="quiz-options"></div>
+            </fieldset>
+            <div class="quiz-nav">
+              <button type="button" class="btn-ghost" id="quiz-back" data-i18n="back">Question précédente</button>
+            </div>
+          </form>
+
+          <div id="diag-result" class="result" hidden tabindex="-1">
+            <p class="result-level"><span data-i18n="level">Niveau :</span> <strong id="res-level"></strong> <span id="res-score" class="result-score"></span></p>
+            <p id="res-text" class="result-text"></p>
+            <h3 class="h3" data-i18n="path_title">Parcours recommandé</h3>
+            <ol id="res-path" class="path"></ol>
+            <p id="res-funding" class="funding"></p>
+            <div class="result-actions">
+              <a class="btn js-booking" id="res-cta" href="#contact" data-i18n="res_cta">Réserver le diagnostic approfondi</a>
+              <button type="button" class="btn-ghost" id="res-restart" data-i18n="restart">Refaire le diagnostic</button>
+            </div>
+            <p class="small" data-i18n="res_note">Un échange en visio pour vérifier ces résultats avec vous et chiffrer le parcours. Le résumé de vos scores est joint à la demande.</p>
+          </div>
+        </div>
+
+        <figure class="ring-wrap" aria-labelledby="ring-caption">
+          <svg id="ring" class="ring" viewBox="0 0 360 360" role="img" aria-labelledby="ring-caption"></svg>
+          <figcaption id="ring-caption" class="ring-legend"></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Offres -->
+    <section id="offres" class="section offers" aria-labelledby="offers-title">
+      <div class="wrap">
+        <h2 id="offers-title" class="h2" data-i18n="offers_title">Trois façons de travailler ensemble</h2>
+        <div class="offer">
+          <h3 class="offer-name" data-i18n="o1_t">Formations IA</h3>
+          <div class="offer-body">
+            <p data-i18n="o1_d">Des formations pratiques à Claude Code en priorité, ainsi qu'à ChatGPT, DeepSeek et Gemini, construites sur vos documents et vos tâches plutôt que sur des exemples génériques. Elles commencent par un audit de vos usages.</p>
+            <ul class="facts">
+              <li data-i18n="o1_f1">De 14 à 28 heures</li>
+              <li data-i18n="o1_f2">À distance, par séances de 3&nbsp;h&nbsp;30</li>
+              <li data-i18n="o1_f3">Finançables par votre OPCO</li>
+            </ul>
+          </div>
+        </div>
+        <div class="offer">
+          <h3 class="offer-name" data-i18n="o2_t">Automatisations sur mesure</h3>
+          <div class="offer-body">
+            <p data-i18n="o2_d">Je construis avec vous l'agent ou le flux qui supprime une tâche répétitive&nbsp;: veille, comptes rendus, tri de documents, relances.</p>
+            <ul class="facts">
+              <li>Claude Code, n8n, Trigger.dev</li>
+              <li data-i18n="o2_f2">Exécution sur vos machines si besoin</li>
+              <li data-i18n="o2_f3">Documentation remise à l'équipe</li>
+            </ul>
+          </div>
+        </div>
+        <div class="offer">
+          <h3 class="offer-name" data-i18n="o3_t">Pilotage de projet IA</h3>
+          <div class="offer-body">
+            <p data-i18n="o3_d">Je cadre et pilote vos projets IA comme Scrum Master et Product Owner&nbsp;: besoins, priorités, gouvernance, livraison.</p>
+            <ul class="facts">
+              <li data-i18n="o3_f1">Certifié PSM&nbsp;I</li>
+              <li>Scrum, Kanban, SAFe</li>
+              <li data-i18n="o3_f3">Jira pratiqué et administré</li>
+              <li data-i18n="o3_f4">Gouvernance de l'IA, AI Act, RGPD</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Références -->
+    <section id="preuves" class="section proof" aria-labelledby="proof-title">
+      <div class="wrap">
+        <h2 id="proof-title" class="h2" data-i18n="proof_title">Ce qui est déjà fait</h2>
+        <div class="about">
+          <div class="portrait"><img src="assets/portrait.jpg" alt="Portrait de Mathieu Delloye" data-i18n-attr="alt:portrait_alt" width="426" height="640" loading="lazy"></div>
+          <div>
+            <p class="about-text" data-i18n="about">Depuis 13 ans, je pilote des projets informatiques dans des secteurs exigeants&nbsp;: nucléaire, banque, ressources humaines. J'ai été tour à tour PMO, chef de projet, Scrum Master et Product Owner, chez Adecco, Devoteam, Atos et Framatome. Depuis septembre 2026, je suis indépendant et je me consacre à la formation à l'intelligence artificielle&nbsp;: Claude Code en priorité, mais aussi ChatGPT, DeepSeek et Gemini. Je forme les équipes, j'automatise ce qui doit l'être et je pilote les projets IA jusqu'à la livraison.</p>
+            <dl class="figures">
+              <div><dt data-i18n="f1">ans de gestion de projet IT</dt><dd>13+</dd></div>
+              <div><dt data-i18n="f2">utilisateurs accompagnés lors d'une migration</dt><dd>20&nbsp;000+</dd></div>
+              <div><dt data-i18n="f3">de projets IA, automatisation et données pilotés</dt><dd data-i18n="f3v">600&nbsp;k€+</dd></div>
+              <div><dt data-i18n="f4">des sprints livrés dans les délais</dt><dd>95&nbsp;%</dd></div>
+            </dl>
+            <dl class="about-meta">
+              <div><dt data-i18n="m_where_t">Où</dt><dd data-i18n="m_where">Basé près de Naples, interventions à distance en France et en Italie</dd></div>
+              <div><dt data-i18n="m_edu_t">Formation</dt><dd data-i18n="m_edu">Master international en intelligence artificielle, Rome Business School (en cours). Master et deux titres RNCP de niveau&nbsp;1, ECEMA Lyon</dd></div>
+              <div><dt data-i18n="m_cert_t">Certifications</dt><dd>PSM&nbsp;I, PRINCE2 Foundation, ITIL&nbsp;V3 Foundation, Power BI Fundamentals</dd></div>
+              <div><dt data-i18n="m_lang_t">Langues</dt><dd data-i18n="m_lang">Français (langue maternelle), anglais C2, italien C2, espagnol B2</dd></div>
+            </dl>
+          </div>
+        </div>
+
+        <div class="activity" id="activity">
+          <h3 class="h3" data-i18n="act_title">Activité de formation et d'automatisation</h3>
+          <p class="small" id="act-date"></p>
+          <ul class="activity-sum" id="act-sum"></ul>
+          <table class="activity-table">
+            <caption class="visually-hidden" data-i18n="act_caption">Formations engagées, par secteur client</caption>
+            <thead><tr><th scope="col" data-i18n="th_sector">Client</th><th scope="col" data-i18n="th_theme">Thème</th><th scope="col" data-i18n="th_hours">Durée</th><th scope="col" data-i18n="th_stage">Étape</th></tr></thead>
+            <tbody id="act-rows"></tbody>
+          </table>
+        </div>
+
+        <div class="career">
+          <h3 class="h3" data-i18n="career_title">Parcours</h3>
+          <ol class="timeline">
+            <li><span class="tl-years" data-i18n="y0">depuis sept. 2026</span><p class="tl-org" data-i18n="c0o">Mathieu Delloye Consulting, indépendant</p><p class="tl-role" data-i18n="c0">Formateur et consultant en IA. Formations sur mesure à Claude Code en priorité, ainsi qu'à ChatGPT, DeepSeek et Gemini&nbsp;; audits des usages et automatisations pour les entreprises.</p></li>
+            <li><span class="tl-years" data-i18n="y1">oct. 2025 – sept. 2026</span><p class="tl-org" data-i18n="c1o">Framatome, en indépendant</p><p class="tl-role" data-i18n="c1">Product Owner IA et solutions numériques, Scrum Master. Plateforme d'IA générative d'entreprise (OpenAI, Azure OpenAI), 38 automatisations UiPath qui réduisent les tests de 70&nbsp;%, agents Microsoft Copilot.</p></li>
+            <li><span class="tl-years" data-i18n="y2">oct. 2019 – oct. 2025</span><p class="tl-org" data-i18n="c2o">Atos, Framatome Digital Factory</p><p class="tl-role" data-i18n="c2">Senior Project Manager, Product Owner IA et Scrum Master. Plus de 50 applications livrées, 3 équipes Scrum en parallèle (15 personnes), +40&nbsp;% de productivité des développeurs, 98&nbsp;% de satisfaction.</p></li>
+            <li><span class="tl-years" data-i18n="y3">2017 – sept. 2019</span><p class="tl-org" data-i18n="c3o">Devoteam, chez BPCE-IT</p><p class="tl-role" data-i18n="c3">Chef de projet, qualité et processus IT. Plus de 150 demandes ServiceNow automatisées chaque mois (98&nbsp;% de satisfaction), tableaux de bord Power BI.</p></li>
+            <li><span class="tl-years" data-i18n="y4">2014 – sept. 2017</span><p class="tl-org">Adecco Group, Modis</p><p class="tl-role" data-i18n="c4">PMO de programme, puis PMO pays. Pilotage financier d'un portefeuille agile de plus de 30&nbsp;M€ par an.</p></li>
+            <li><span class="tl-years">2013</span><p class="tl-org" data-i18n="c5o">Framatome (ex-Areva)</p><p class="tl-role" data-i18n="c5">Chef de projet technique. Suivi chiffré de l'avancement d'opérations de démantèlement.</p></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projets personnels -->
+    <section id="projets" class="section projects" aria-labelledby="projects-title">
+      <div class="wrap">
+        <h2 id="projects-title" class="h2" data-i18n="proj_title">Projets construits avec Claude Code</h2>
+        <p class="lead" data-i18n="proj_lead">Des outils en service ou en test, construits de bout en bout avec Claude Code, des agents et des connecteurs MCP.</p>
+        <div class="project-grid">
+          <article class="project">
+            <p class="status" data-i18n="st_service">En service</p>
+            <h3 data-i18n="np1_t">Usine à formations</h3>
+            <p data-i18n="np1">À partir de la fiche de besoin du client, Claude Code produit le programme, un deck aux couleurs de la marque (jusqu'à 81 diapositives), le QCM, le cas pratique, le cahier d'exercices et le tableau d'audit. La fiche arrive directement depuis Gmail.</p>
+            <p class="project-result" data-i18n="np1r">5 decks, 27 documents de formation et 4 tableaux d'audit produits, selon un même workflow.</p>
+            <p class="project-stack">Claude Code, skills, Node.js (pptx, docx), Python, Excalidraw</p>
+          </article>
+          <article class="project">
+            <p class="status" data-i18n="st_service">En service</p>
+            <h3>Journal Daily AI</h3>
+            <p data-i18n="np2">Un journal de l'actualité de l'IA, publié chaque jour depuis le 22 octobre 2026&nbsp;: éditions en français et en italien, lecture audio, brouillons et visuels pour LinkedIn.</p>
+            <p class="project-result"><span id="np2-count" data-i18n="np2r">Éditions publiées</span> · <a class="link" href="https://techaddictitfr.github.io/Daily-AI-The-AI-business-journal-by-MathieuDelloyeConsulting/" target="_blank" rel="noopener noreferrer" data-i18n="np2l">Lire le journal</a></p>
+            <p class="project-stack" data-i18n="np2s">Claude Code, GitHub Pages, synthèse vocale</p>
+          </article>
+          <article class="project">
+            <p class="status" data-i18n="st_service">En service</p>
+            <h3 data-i18n="np3_t">Claude connecté à vos outils (MCP)</h3>
+            <p data-i18n="np3">Grâce aux connecteurs MCP, Claude lit vos courriels, récupère des pages web, dépose des livrables et déploie des automatisations, sans copier-coller.</p>
+            <p class="project-result" data-i18n="np3r">Utilisé au quotidien dans les formations et la veille.</p>
+            <p class="project-stack">Gmail, Google Drive, Firecrawl, Trigger.dev</p>
+          </article>
+          <article class="project">
+            <p class="status" data-i18n="st_service">En service</p>
+            <h3 data-i18n="np4_t">Sites animés à partir d'une vidéo</h3>
+            <p data-i18n="np4">Une courte vidéo devient une page qui s'anime au défilement, en 3D si besoin&nbsp;: filigranes recadrés, images agrandies par IA, couleurs tirées de la vidéo.</p>
+            <p class="project-result" data-i18n="np4r">Ce site en est l'exemple.</p>
+            <p class="project-stack">Claude Code, Three.js, FFmpeg, Real-ESRGAN</p>
+          </article>
+          <article class="project project-wide">
+            <p class="status status-mixed" data-i18n="st_cloud">Déployés ou en test</p>
+            <h3 data-i18n="np5_t">Agents déployés dans le cloud</h3>
+            <ul class="agents">
+              <li><strong data-i18n="np5a_t">Veille YouTube sur la gouvernance de l'IA</strong> <span data-i18n="np5a">Sélection des vidéos pertinentes et rapport par courriel chaque lundi à 7&nbsp;h. Trigger.dev, statut&nbsp;: construit.</span></li>
+              <li><strong data-i18n="np5b_t">Analyse concurrentielle de la formation IA en Italie</strong> <span data-i18n="np5b">Calcul des scores et rapport exécutés sur Modal. Statut&nbsp;: prototype.</span></li>
+              <li><strong>AI Job-Market Agent</strong> <span data-i18n="np5c">Pipeline agentique d'analyse d'offres d'emploi. Firecrawl, Adzuna, Vercel, Trigger.dev, Modal.</span></li>
+            </ul>
+          </article>
+        </div>
+        <p class="prototypes" data-i18n="proto">Premiers prototypes&nbsp;: assistant RAG hors ligne sur un MacBook de 2013 (−77&nbsp;% de latence mesurée), tableau de bord ETL multi-sources, extension Chrome d'aide aux études, veille automatisée avec n8n, orchestration d'agents Hermes / Solar Mini.</p>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section contact" aria-labelledby="contact-title">
+      <div class="wrap contact-inner">
+        <h2 id="contact-title" class="h2" data-i18n="contact_title">Parlons de votre diagnostic</h2>
+        <p class="lead" data-i18n="contact_lead">Un premier échange en visio pour comprendre votre contexte et voir si je peux vous aider.</p>
+        <div class="contact-actions">
+          <a class="btn js-booking" href="#contact" data-i18n="nav_book">Réserver un échange</a>
+          <a class="link js-email" href="#contact"></a>
+          <a class="link js-linkedin" href="#contact" rel="noopener noreferrer" target="_blank">LinkedIn</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 Mathieu Delloye Consulting</p>
+    <p data-i18n="footer_privacy">Aucun cookie, aucune mesure d'audience.</p>
+    <a class="link js-github" href="#top" rel="noopener noreferrer" target="_blank">GitHub</a>
+  </footer>
+</body>
+</html>
