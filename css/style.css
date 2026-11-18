@@ -62,26 +62,6 @@
   --shadow-1: 0 1px 2px rgba(11, 31, 58, 0.08), 0 8px 24px -12px rgba(14, 127, 138, 0.2);
   --shadow-2: 0 2px 4px rgba(11, 31, 58, 0.08), 0 24px 60px -20px rgba(14, 127, 138, 0.28);
 }
-/* Sans JavaScript : suivre le réglage de l'appareil */
-@media (prefers-color-scheme: light) {
-  :root:not([data-theme]) {
-  --ink-0: #F6F8FB; --ink-1: #FFFFFF; --ink-2: #DCE3EC;
-  --fg: #0B1F3A; --fg-2: #132C50; --fg-3: #4A5B76;
-  --line: rgba(11, 31, 58, 0.14);
-  --line-cyan: rgba(14, 127, 138, 0.45);
-  --line-ui: rgba(74, 91, 118, 0.55);
-  --accent-text: #0B6A73;                    /* turquoise foncé de la charte, assombri pour le texte (5,9:1) */
-  --on-accent: #0B1F3A;
-  --veil-rgb: 246, 248, 251;
-  --surface-rgb: 255, 255, 255;
-  --surface-2-rgb: 220, 227, 236;
-  --grain: 0.035;
-  --ring-1: #0E7F8A; --ring-2: #0B1F3A; --ring-3: #0B6A73; --ring-4: #4A5B76;
-  --ring-track: rgba(11, 31, 58, 0.08);
-  --shadow-1: 0 1px 2px rgba(11, 31, 58, 0.08), 0 8px 24px -12px rgba(14, 127, 138, 0.2);
-  --shadow-2: 0 2px 4px rgba(11, 31, 58, 0.08), 0 24px 60px -20px rgba(14, 127, 138, 0.28);
-  }
-}
 /* Contraste renforcé (menu Accessibilité ou réglage « contraste élevé » de l'appareil) */
 :root[data-contrast="more"] {
   --fg-2: #F6F8FB; --fg-3: #DCE3EC;
