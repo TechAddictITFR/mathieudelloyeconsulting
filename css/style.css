@@ -100,7 +100,6 @@
 *, *::before, *::after { box-sizing: border-box; }
 /* Grands textes et petits écrans : les mots longs passent à la ligne plutôt que de déborder */
 h1, h2, h3, p, legend, li, dd, dt, td, a, button { overflow-wrap: break-word; }
-.h2, .hero-title, .offer-name { hyphens: auto; }
 .link.js-email { overflow-wrap: anywhere; }
 html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
 body {
