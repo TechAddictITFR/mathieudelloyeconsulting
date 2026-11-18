@@ -1,9 +1,9 @@
 // Préférences d'affichage, appliquées avant le premier rendu (script classique et synchrone, chargé dans le <head>).
-// Thème (sombre par défaut), taille du texte, contraste, animations : choix du visiteur, sinon valeurs par défaut.
+// Thème (clair par défaut), taille du texte, contraste, animations : choix du visiteur, sinon valeurs par défaut.
 (function () {
   var root = document.documentElement;
   var CHOIX = {
-    theme: ["dark", "light", "auto"], // sombre par défaut ; « auto » suit l'appareil
+    theme: ["light", "dark", "auto"], // clair par défaut ; « auto » suit l'appareil
     text: ["normal", "large", "xlarge"],
     contrast: ["auto", "normal", "more"],
     motion: ["auto", "reduce"],
