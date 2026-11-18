@@ -353,8 +353,13 @@ ol, ul { padding: 0; list-style: none; }
 .about-meta dd { color: var(--fg-2); }
 /* Former et faire adopter */
 .training { margin-top: var(--s6); }
-.training-figures { margin-top: var(--s3); }
-.training-more { margin-top: var(--s3); max-width: 52rem; color: var(--fg-2); }
+.training-lead { margin-top: var(--s1); max-width: 44rem; font-size: 1.125rem; color: var(--fg-2); }
+.proofs { margin-top: var(--s4); display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--s3); }
+.proof { display: grid; align-content: start; gap: var(--s1); padding: var(--s3); background: var(--ink-1); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow-1); }
+.proof-n { font: 400 clamp(2.25rem, 3.6vw, 3rem)/1 var(--serif); letter-spacing: -0.03em; color: var(--accent-text); }
+.proof-what { color: var(--fg-2); }
+.proof-result { color: var(--fg); font-weight: 600; }
+.proof-tools { margin-top: 0.25rem; font-size: 0.8125rem; color: var(--fg-3); }
 .example {
   margin-top: var(--s5); padding: var(--s4); background: var(--ink-1);
   border: 1px solid var(--line); border-radius: calc(var(--radius) + 4px); box-shadow: var(--shadow-2);
@@ -427,6 +432,7 @@ ol, ul { padding: 0; list-style: none; }
   .project-grid { grid-template-columns: 1fr; gap: var(--s4); }
   .agents { grid-template-columns: 1fr; }
   .example-grid { grid-template-columns: 1fr; gap: var(--s4); }
+  .proofs { grid-template-columns: 1fr; }
   .kit { padding-left: 0; padding-top: var(--s3); border-left: 0; border-top: 1px solid var(--line-cyan); }
 }
 @media (max-width: 640px) {
