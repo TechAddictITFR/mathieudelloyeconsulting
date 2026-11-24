@@ -21,7 +21,7 @@
   <header class="site-header">
     <a class="brand" href="#top" aria-label="Mathieu Delloye Consulting, retour en haut" data-i18n-attr="aria-label:brand_aria">
       <img src="assets/logo-mdc.svg" alt="" width="32" height="32">
-      <span>Mathieu Delloye <span class="brand-sub">Consulting</span></span>
+      <span class="brand-name">Mathieu Delloye <span class="brand-sub">Consulting</span></span>
     </a>
     <nav class="nav" aria-label="Navigation principale" data-i18n-attr="aria-label:nav_aria">
       <a href="#diagnostic" data-i18n="nav_diag">Diagnostic</a>
@@ -70,7 +70,11 @@
           <button type="button" class="btn-ghost a11y-reset" id="a11y-reset" data-i18n="a11y_reset">Réinitialiser</button>
         </div>
       </div>
-      <button class="lang" type="button" id="lang-toggle" aria-label="Switch to English" lang="en">EN</button>
+      <div class="lang-switch" role="group" aria-label="Langue">
+        <button type="button" class="lang" data-lang="fr" lang="fr" aria-pressed="true" title="Français">FR</button>
+        <button type="button" class="lang" data-lang="en" lang="en" aria-pressed="false" title="English">EN</button>
+        <button type="button" class="lang" data-lang="it" lang="it" aria-pressed="false" title="Italiano">IT</button>
+      </div>
       <a class="btn btn-small js-booking" href="#contact" data-i18n="nav_book">Réserver un échange</a>
     </div>
   </header>
@@ -222,23 +226,23 @@
           <h3 class="h3" data-i18n="tr_title">Former et faire adopter</h3>
           <p class="training-lead" data-i18n="tr_lead">Des salariés de terrain aux chefs de projet, j'accompagne les équipes dans la prise en main de nouveaux outils, jusqu'à ce qu'elles les utilisent seules.</p>
           <ul class="proofs">
-            <li class="proof">
+            <li class="proof-card">
               <p class="proof-n">1&nbsp;000+</p>
               <p class="proof-what" data-i18n="tr_p1">salariés accompagnés dans le passage à de nouveaux outils de travail&nbsp;: applications de qualité, de sécurité et d'ingénierie, puis migration vers une nouvelle plateforme, dans l'industrie nucléaire.</p>
               <p class="proof-tools" data-i18n="tr_p1o">Outils&nbsp;: Devonway, plateforme MIRAMAR</p>
             </li>
-            <li class="proof">
+            <li class="proof-card">
               <p class="proof-n">500+</p>
               <p class="proof-what" data-i18n="tr_p2">collaborateurs accompagnés dans l'usage de l'IA générative, au sein de la communauté IA interne d'un grand industriel, avec des ateliers sur les assistants Copilot.</p>
               <p class="proof-result" data-i18n="tr_p2r">Résultat&nbsp;: 20 applications d'IA créées par les équipes elles-mêmes.</p>
               <p class="proof-tools" data-i18n="tr_p2o">Outils&nbsp;: OpenAI, Azure OpenAI, Microsoft Copilot</p>
             </li>
-            <li class="proof">
+            <li class="proof-card">
               <p class="proof-n">40+</p>
               <p class="proof-what" data-i18n="tr_p3">clients formés à créer leurs propres applications sans coder et à automatiser leurs tâches répétitives.</p>
               <p class="proof-tools" data-i18n="tr_p3o">Outils&nbsp;: Power Platform, UiPath (automatisation), Devonway</p>
             </li>
-            <li class="proof">
+            <li class="proof-card">
               <p class="proof-n">43</p>
               <p class="proof-what" data-i18n="tr_p4">chefs de projet formés aux méthodes de pilotage (budget, planning, suivi) et à l'outil de gestion des projets, comme responsable du bureau des projets d'un groupe de services RH.</p>
               <p class="proof-tools" data-i18n="tr_p4o">Outils&nbsp;: méthodes de bureau des projets (PMO), logiciel de gestion de portefeuille</p>
@@ -294,7 +298,7 @@
             <p class="status" data-i18n="st_service">En service</p>
             <h3 data-i18n="np1_t">Usine à formations</h3>
             <p data-i18n="np1">À partir de la fiche de besoin du client, Claude Code produit le programme, un deck aux couleurs de la marque (jusqu'à 81 diapositives), le QCM, le cas pratique, le cahier d'exercices et le tableau d'audit. La fiche arrive directement depuis Gmail.</p>
-            <p class="project-result" data-i18n="np1r">5 decks, 27 documents de formation et 4 tableaux d'audit produits, selon un même workflow.</p>
+            <p class="project-result" data-i18n="np1r">7 decks clients, 51 documents de formation et 13 tableaux d'audit produits, selon un même workflow.</p>
             <p class="project-stack">Claude Code, skills, Node.js (pptx, docx), Python, Excalidraw</p>
           </article>
           <article class="project">

@@ -1,9 +1,29 @@
 {
  "axes": [
-  {"id": "usages", "fr": "Usages de l'IA", "en": "AI usage"},
-  {"id": "donnees", "fr": "Données et outils", "en": "Data and tools"},
-  {"id": "processus", "fr": "Potentiel d'automatisation", "en": "Automation potential"},
-  {"id": "equipe", "fr": "Équipe et compétences", "en": "Team and skills"}
+  {
+   "id": "usages",
+   "fr": "Usages de l'IA",
+   "en": "AI usage",
+   "it": "Uso dell'IA"
+  },
+  {
+   "id": "donnees",
+   "fr": "Données et outils",
+   "en": "Data and tools",
+   "it": "Dati e strumenti"
+  },
+  {
+   "id": "processus",
+   "fr": "Potentiel d'automatisation",
+   "en": "Automation potential",
+   "it": "Potenziale di automazione"
+  },
+  {
+   "id": "equipe",
+   "fr": "Équipe et compétences",
+   "en": "Team and skills",
+   "it": "Team e competenze"
+  }
  ],
  "questions": [
   {
@@ -11,137 +31,323 @@
    "fr": "À quelle fréquence votre équipe utilise-t-elle un assistant IA (ChatGPT, Claude, Copilot…) ?",
    "en": "How often does your team use an AI assistant (ChatGPT, Claude, Copilot…)?",
    "options": [
-    {"fr": "Jamais", "en": "Never"},
-    {"fr": "Quelques essais individuels", "en": "A few individual attempts"},
-    {"fr": "Chaque semaine, chacun à sa façon", "en": "Weekly, everyone in their own way"},
-    {"fr": "Tous les jours, avec des pratiques partagées", "en": "Daily, with shared practices"}
-   ]
+    {
+     "fr": "Jamais",
+     "en": "Never",
+     "it": "Mai"
+    },
+    {
+     "fr": "Quelques essais individuels",
+     "en": "A few individual attempts",
+     "it": "Qualche prova individuale"
+    },
+    {
+     "fr": "Chaque semaine, chacun à sa façon",
+     "en": "Weekly, everyone in their own way",
+     "it": "Ogni settimana, ognuno a modo suo"
+    },
+    {
+     "fr": "Tous les jours, avec des pratiques partagées",
+     "en": "Daily, with shared practices",
+     "it": "Ogni giorno, con pratiche condivise"
+    }
+   ],
+   "it": "Con quale frequenza il vostro team usa un assistente IA (ChatGPT, Claude, Copilot…)?"
   },
   {
    "axe": "usages",
    "fr": "Avez-vous des règles d'usage de l'IA (données autorisées, outils validés) ?",
    "en": "Do you have rules for using AI (allowed data, approved tools)?",
    "options": [
-    {"fr": "Non", "en": "No"},
-    {"fr": "Le sujet a été évoqué", "en": "It has been discussed"},
-    {"fr": "Des règles orales", "en": "Unwritten rules"},
-    {"fr": "Une charte écrite, connue de tous", "en": "A written policy everyone knows"}
-   ]
+    {
+     "fr": "Non",
+     "en": "No",
+     "it": "No"
+    },
+    {
+     "fr": "Le sujet a été évoqué",
+     "en": "It has been discussed",
+     "it": "Se n'è parlato"
+    },
+    {
+     "fr": "Des règles orales",
+     "en": "Unwritten rules",
+     "it": "Regole non scritte"
+    },
+    {
+     "fr": "Une charte écrite, connue de tous",
+     "en": "A written policy everyone knows",
+     "it": "Una policy scritta e conosciuta da tutti"
+    }
+   ],
+   "it": "Avete delle regole sull'uso dell'IA (dati consentiti, strumenti approvati)?"
   },
   {
    "axe": "donnees",
    "fr": "Où se trouvent vos informations clés (clients, dossiers, procédures) ?",
    "en": "Where does your key information live (clients, files, procedures)?",
    "options": [
-    {"fr": "Dans les courriels et dans la tête de chacun", "en": "In emails and in people's heads"},
-    {"fr": "Dans des dossiers partagés, sans vraie structure", "en": "In shared folders, loosely organised"},
-    {"fr": "Dans des outils métiers peu reliés entre eux", "en": "In business tools that barely connect"},
-    {"fr": "Dans des outils reliés et tenus à jour", "en": "In connected, up-to-date tools"}
-   ]
+    {
+     "fr": "Dans les courriels et dans la tête de chacun",
+     "en": "In emails and in people's heads",
+     "it": "Nelle email e nella testa delle persone"
+    },
+    {
+     "fr": "Dans des dossiers partagés, sans vraie structure",
+     "en": "In shared folders, loosely organised",
+     "it": "In cartelle condivise, senza una vera struttura"
+    },
+    {
+     "fr": "Dans des outils métiers peu reliés entre eux",
+     "en": "In business tools that barely connect",
+     "it": "In strumenti aziendali poco collegati tra loro"
+    },
+    {
+     "fr": "Dans des outils reliés et tenus à jour",
+     "en": "In connected, up-to-date tools",
+     "it": "In strumenti collegati e aggiornati"
+    }
+   ],
+   "it": "Dove si trovano le vostre informazioni chiave (clienti, pratiche, procedure)?"
   },
   {
    "axe": "donnees",
    "fr": "Vos outils échangent-ils des données entre eux ?",
    "en": "Do your tools exchange data with each other?",
    "options": [
-    {"fr": "Je ne sais pas", "en": "I don't know"},
-    {"fr": "Par des exports faits à la main", "en": "Through manual exports"},
-    {"fr": "Quelques connexions automatiques", "en": "A few automatic connections"},
-    {"fr": "Oui, la plupart sont connectés", "en": "Yes, most are connected"}
-   ]
+    {
+     "fr": "Je ne sais pas",
+     "en": "I don't know",
+     "it": "Non lo so"
+    },
+    {
+     "fr": "Par des exports faits à la main",
+     "en": "Through manual exports",
+     "it": "Tramite esportazioni manuali"
+    },
+    {
+     "fr": "Quelques connexions automatiques",
+     "en": "A few automatic connections",
+     "it": "Qualche collegamento automatico"
+    },
+    {
+     "fr": "Oui, la plupart sont connectés",
+     "en": "Yes, most are connected",
+     "it": "Sì, la maggior parte è collegata"
+    }
+   ],
+   "it": "I vostri strumenti si scambiano dati tra loro?"
   },
   {
    "axe": "processus",
    "fr": "Combien d'heures par semaine une personne passe-t-elle sur des tâches répétitives (ressaisie, relances, comptes rendus) ?",
    "en": "How many hours a week does one person spend on repetitive tasks (re-typing, follow-ups, reports)?",
    "options": [
-    {"fr": "Moins de 2 h", "en": "Under 2 h"},
-    {"fr": "De 2 à 5 h", "en": "2 to 5 h"},
-    {"fr": "De 5 à 10 h", "en": "5 to 10 h"},
-    {"fr": "Plus de 10 h", "en": "Over 10 h"}
-   ]
+    {
+     "fr": "Moins de 2 h",
+     "en": "Under 2 h",
+     "it": "Meno di 2 ore"
+    },
+    {
+     "fr": "De 2 à 5 h",
+     "en": "2 to 5 h",
+     "it": "Da 2 a 5 ore"
+    },
+    {
+     "fr": "De 5 à 10 h",
+     "en": "5 to 10 h",
+     "it": "Da 5 a 10 ore"
+    },
+    {
+     "fr": "Plus de 10 h",
+     "en": "Over 10 h",
+     "it": "Più di 10 ore"
+    }
+   ],
+   "it": "Quante ore a settimana una persona dedica ad attività ripetitive (reinserimento di dati, solleciti, verbali)?"
   },
   {
    "axe": "processus",
    "fr": "Certaines tâches suivent-elles une règle claire, du type « si… alors… » ?",
    "en": "Do some tasks follow a clear \"if… then…\" rule?",
    "options": [
-    {"fr": "Je n'en vois pas", "en": "I can't think of any"},
-    {"fr": "Une ou deux", "en": "One or two"},
-    {"fr": "Plusieurs, connues de tous", "en": "Several, known to everyone"},
-    {"fr": "Beaucoup, et elles sont documentées", "en": "Many, and they are documented"}
-   ]
+    {
+     "fr": "Je n'en vois pas",
+     "en": "I can't think of any",
+     "it": "Non me ne vengono in mente"
+    },
+    {
+     "fr": "Une ou deux",
+     "en": "One or two",
+     "it": "Una o due"
+    },
+    {
+     "fr": "Plusieurs, connues de tous",
+     "en": "Several, known to everyone",
+     "it": "Diverse, note a tutti"
+    },
+    {
+     "fr": "Beaucoup, et elles sont documentées",
+     "en": "Many, and they are documented",
+     "it": "Molte, e sono documentate"
+    }
+   ],
+   "it": "Alcune attività seguono una regola chiara, del tipo «se… allora…»?"
   },
   {
    "axe": "equipe",
    "fr": "Votre équipe a-t-elle été formée à l'IA ?",
    "en": "Has your team been trained in AI?",
    "options": [
-    {"fr": "Non", "en": "No"},
-    {"fr": "Chacun s'est formé seul", "en": "Everyone taught themselves"},
-    {"fr": "Une sensibilisation générale", "en": "A general awareness session"},
-    {"fr": "Une formation pratique sur nos cas métiers", "en": "Hands-on training on our own use cases"}
-   ]
+    {
+     "fr": "Non",
+     "en": "No",
+     "it": "No"
+    },
+    {
+     "fr": "Chacun s'est formé seul",
+     "en": "Everyone taught themselves",
+     "it": "Ognuno si è formato da solo"
+    },
+    {
+     "fr": "Une sensibilisation générale",
+     "en": "A general awareness session",
+     "it": "Una sensibilizzazione generale"
+    },
+    {
+     "fr": "Une formation pratique sur nos cas métiers",
+     "en": "Hands-on training on our own use cases",
+     "it": "Una formazione pratica sui nostri casi d'uso"
+    }
+   ],
+   "it": "Il vostro team è stato formato sull'IA?"
   },
   {
    "axe": "equipe",
    "fr": "Qui porterait un projet IA chez vous ?",
    "en": "Who would lead an AI project in your company?",
    "options": [
-    {"fr": "Personne pour l'instant", "en": "Nobody yet"},
-    {"fr": "Le dirigeant, quand il a le temps", "en": "The manager, when time allows"},
-    {"fr": "Un référent identifié", "en": "A named point person"},
-    {"fr": "Une équipe avec du temps dédié", "en": "A team with dedicated time"}
-   ]
+    {
+     "fr": "Personne pour l'instant",
+     "en": "Nobody yet",
+     "it": "Ancora nessuno"
+    },
+    {
+     "fr": "Le dirigeant, quand il a le temps",
+     "en": "The manager, when time allows",
+     "it": "Il titolare, quando ha tempo"
+    },
+    {
+     "fr": "Un référent identifié",
+     "en": "A named point person",
+     "it": "Un referente individuato"
+    },
+    {
+     "fr": "Une équipe avec du temps dédié",
+     "en": "A team with dedicated time",
+     "it": "Un team con tempo dedicato"
+    }
+   ],
+   "it": "Chi guiderebbe un progetto di IA nella vostra azienda?"
   },
   {
    "axe": "taille",
    "fr": "Quelle est la taille de votre structure ?",
    "en": "How large is your organisation?",
    "options": [
-    {"fr": "Indépendant", "en": "Self-employed"},
-    {"fr": "De 1 à 10 salariés", "en": "1 to 10 employees"},
-    {"fr": "De 11 à 49 salariés", "en": "11 to 49 employees"},
-    {"fr": "50 salariés ou plus", "en": "50 employees or more"}
-   ]
+    {
+     "fr": "Indépendant",
+     "en": "Self-employed",
+     "it": "Libero professionista"
+    },
+    {
+     "fr": "De 1 à 10 salariés",
+     "en": "1 to 10 employees",
+     "it": "Da 1 a 10 dipendenti"
+    },
+    {
+     "fr": "De 11 à 49 salariés",
+     "en": "11 to 49 employees",
+     "it": "Da 11 a 49 dipendenti"
+    },
+    {
+     "fr": "50 salariés ou plus",
+     "en": "50 employees or more",
+     "it": "50 dipendenti o più"
+    }
+   ],
+   "it": "Quanto è grande la vostra organizzazione?"
   }
  ],
  "niveaux": [
-  {"max": 33, "fr": "Découverte", "en": "Discovery",
+  {
+   "max": 33,
+   "fr": "Découverte",
+   "en": "Discovery",
    "texte_fr": "L'IA est encore peu présente. C'est le bon moment pour poser des bases communes avant que chacun n'invente ses usages.",
-   "texte_en": "AI is barely in use yet. This is the right time to set shared foundations before everyone invents their own habits."},
-  {"max": 66, "fr": "Expérimentation", "en": "Experimentation",
+   "texte_en": "AI is barely in use yet. This is the right time to set shared foundations before everyone invents their own habits.",
+   "it": "Scoperta",
+   "texte_it": "L'IA è ancora poco presente. È il momento giusto per porre basi comuni, prima che ognuno inventi le proprie abitudini."
+  },
+  {
+   "max": 66,
+   "fr": "Expérimentation",
+   "en": "Experimentation",
    "texte_fr": "L'IA est utilisée, mais de façon dispersée. Il s'agit maintenant de choisir les bons cas d'usage et de les rendre fiables.",
-   "texte_en": "AI is in use, but scattered. The next step is choosing the right use cases and making them reliable."},
-  {"max": 100, "fr": "Structuration", "en": "Structuring",
+   "texte_en": "AI is in use, but scattered. The next step is choosing the right use cases and making them reliable.",
+   "it": "Sperimentazione",
+   "texte_it": "L'IA è usata, ma in modo sparso. Ora si tratta di scegliere i casi d'uso giusti e di renderli affidabili."
+  },
+  {
+   "max": 100,
+   "fr": "Structuration",
+   "en": "Structuring",
    "texte_fr": "Les bases sont là. Le gain se joue maintenant dans l'automatisation de vos processus et le pilotage des projets.",
-   "texte_en": "The foundations are in place. The gains now come from automating your processes and steering the projects."}
+   "texte_en": "The foundations are in place. The gains now come from automating your processes and steering the projects.",
+   "it": "Strutturazione",
+   "texte_it": "Le basi ci sono. Il guadagno ora sta nell'automazione dei vostri processi e nella guida dei progetti."
+  }
  ],
  "offres": {
   "formation": {
-   "fr": "Formation IA sur vos cas métiers", "en": "AI training on your own use cases",
+   "fr": "Formation IA sur vos cas métiers",
+   "en": "AI training on your own use cases",
    "detail_fr": "Environ 14 h en 4 séances, construites à partir de vos documents et de vos tâches.",
-   "detail_en": "About 14 hours over 4 sessions, built from your own documents and tasks."
+   "detail_en": "About 14 hours over 4 sessions, built from your own documents and tasks.",
+   "it": "Formazione sull'IA sui vostri casi d'uso",
+   "detail_it": "Circa 14 ore in 4 sessioni, costruite a partire dai vostri documenti e dalle vostre attività."
   },
   "formation_avancee": {
-   "fr": "Formation avancée : agents IA et automatisation", "en": "Advanced training: AI agents and automation",
+   "fr": "Formation avancée : agents IA et automatisation",
+   "en": "Advanced training: AI agents and automation",
    "detail_fr": "De 21 à 28 h pour apprendre à construire vous-même agents, assistants et automatisations.",
-   "detail_en": "21 to 28 hours to learn how to build your own agents, assistants and automations."
+   "detail_en": "21 to 28 hours to learn how to build your own agents, assistants and automations.",
+   "it": "Formazione avanzata: agenti IA e automazione",
+   "detail_it": "Da 21 a 28 ore per imparare a costruire da soli agenti, assistenti e automazioni."
   },
   "donnees": {
-   "fr": "Remise en ordre des données", "en": "Getting your data in order",
+   "fr": "Remise en ordre des données",
+   "en": "Getting your data in order",
    "detail_fr": "Cartographier où vit l'information et relier les outils, avant d'automatiser.",
-   "detail_en": "Map where information lives and connect your tools before automating anything."
+   "detail_en": "Map where information lives and connect your tools before automating anything.",
+   "it": "Riordino dei dati",
+   "detail_it": "Mappare dove si trovano le informazioni e collegare gli strumenti, prima di automatizzare."
   },
   "automatisation": {
-   "fr": "Automatisation sur mesure", "en": "Custom automation",
+   "fr": "Automatisation sur mesure",
+   "en": "Custom automation",
    "detail_fr": "Un premier flux automatisé sur la tâche répétitive qui vous coûte le plus de temps.",
-   "detail_en": "A first automated workflow on the repetitive task that costs you the most time."
+   "detail_en": "A first automated workflow on the repetitive task that costs you the most time.",
+   "it": "Automazione su misura",
+   "detail_it": "Un primo flusso automatizzato sull'attività ripetitiva che vi costa più tempo."
   },
   "pilotage": {
-   "fr": "Pilotage du projet IA", "en": "AI project leadership",
+   "fr": "Pilotage du projet IA",
+   "en": "AI project leadership",
    "detail_fr": "Un chef de projet / Product Owner pour cadrer, prioriser et livrer avec votre équipe.",
-   "detail_en": "A project manager / Product Owner to scope, prioritise and deliver with your team."
+   "detail_en": "A project manager / Product Owner to scope, prioritise and deliver with your team.",
+   "it": "Gestione del progetto IA",
+   "detail_it": "Un project manager / Product Owner per impostare, dare priorità e rilasciare insieme al vostro team."
   }
  },
  "financement": {
@@ -150,6 +356,9 @@
   "pme_fr": "Pour une entreprise de moins de 50 salariés, la formation est souvent finançable par votre OPCO. Nous le vérifions ensemble.",
   "pme_en": "For French companies under 50 employees, training is often fundable by your OPCO. We will check together.",
   "grande_fr": "Au-delà de 50 salariés, la formation s'intègre à votre plan de développement des compétences.",
-  "grande_en": "Above 50 employees, training fits into your skills development plan."
+  "grande_en": "Above 50 employees, training fits into your skills development plan.",
+  "independant_it": "Per un libero professionista in Francia, la formazione può essere finanziata dal proprio fondo (FIF PL, AGEFICE…). In Italia verifichiamo insieme le possibilità di finanziamento.",
+  "pme_it": "In Francia, per le aziende con meno di 50 dipendenti, la formazione è spesso finanziabile tramite l'OPCO. In Italia verifichiamo insieme le possibilità, ad esempio i fondi interprofessionali.",
+  "grande_it": "Oltre i 50 dipendenti, la formazione rientra nel piano di sviluppo delle competenze dell'azienda."
  }
 }

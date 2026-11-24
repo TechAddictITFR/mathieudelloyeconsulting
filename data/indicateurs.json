@@ -1,5 +1,5 @@
 {
- "mis_a_jour": "2026-11-18",
+ "mis_a_jour": "2026-11-25",
  "synthese": {
   "formations": 3,
   "heures_programmees": 54,
@@ -8,7 +8,14 @@
   "secteurs": 3,
   "automatisations": 4,
   "automatisations_en_service": 1,
-  "editions_daily_ai": 13
+  "editions_daily_ai": 16
+ },
+ "crm": {
+  "dossiers": 15,
+  "audits_realises": 7,
+  "programmes_concus": 7,
+  "formations_planifiees": 0,
+  "formations_realisees": 0
  },
  "formations": [
   {

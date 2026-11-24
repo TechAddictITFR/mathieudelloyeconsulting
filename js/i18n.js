@@ -1,5 +1,5 @@
-// Bascule FR / EN. Le français est écrit dans le HTML ; l'anglais est ici.
-const LANGS = ["fr", "en"];
+// Bascule FR / EN / IT. Le français est écrit dans le HTML ; l'anglais et l'italien sont ici.
+const LANGS = ["fr", "en", "it"];
 const NB = " ";
 
 const EN = {
@@ -129,7 +129,7 @@ const EN = {
   st_cloud: "Deployed or in testing",
   np1_t: "Training factory",
   np1: "From the client's needs form, Claude Code produces the programme, a branded deck (up to 81 slides), the quiz, the case study, the exercise book and the audit board. The form arrives straight from Gmail.",
-  np1r: "5 decks, 27 training documents and 4 audit boards produced with one workflow.",
+  np1r: "7 client decks, 51 training documents and 13 audit boards produced with one workflow.",
   np2: "A daily AI news journal published since 22 October 2026: French and Italian editions, audio reading, LinkedIn drafts and visuals.",
   np2r: "Issues published",
   np2l: "Read the journal",
@@ -152,6 +152,158 @@ const EN = {
   footer_privacy: "No cookies, no analytics.",
 };
 
+const IT = {
+  skip: "Vai al diagnostico",
+  a11y_btn: "Accessibilità",
+  a11y_title: "Impostazioni di visualizzazione",
+  a11y_theme: "Tema",
+  a11y_auto: "Automatico",
+  a11y_light: "Chiaro",
+  a11y_dark: "Scuro",
+  a11y_text: "Dimensione del testo",
+  a11y_t1: "Normale",
+  a11y_t2: "Grande",
+  a11y_t3: "Molto grande",
+  a11y_contrast: "Contrasto",
+  a11y_c1: "Normale",
+  a11y_c2: "Elevato",
+  a11y_motion: "Animazioni",
+  a11y_m1: "Normali",
+  a11y_m2: "Ridotte",
+  a11y_reset: "Ripristina",
+  brand_aria: "Mathieu Delloye Consulting, torna all'inizio",
+  nav_aria: "Navigazione principale",
+  nav_diag: "Diagnostico",
+  nav_offers: "Servizi",
+  nav_proof: "Referenze",
+  nav_projects: "Progetti",
+  nav_book: "Prenota un colloquio",
+  hero_title: `Mettete la vostra azienda sotto lo scanner${NB}IA.`,
+  hero_lead: "Nove domande, tre minuti. Scoprite dove l'IA può far risparmiare tempo al vostro team e da dove cominciare.",
+  hero_cta: "Avvia il diagnostico",
+  hero_hint: "oppure scorrete per vedere la scansione",
+  hero_who: "Mathieu Delloye, formatore e consulente in IA. 13 anni di gestione di progetti IT nel nucleare, nel settore bancario e nelle risorse umane.",
+  phases_aria: "Le tre fasi del diagnostico",
+  p1_t: "Osservare i vostri usi",
+  p1_d: "Chi usa l'IA, per fare cosa, con quali regole.",
+  p2_t: "Leggere i vostri processi",
+  p2_d: "Attività ripetitive, dati sparsi, strumenti che non comunicano tra loro.",
+  p3_t: "Rivelare il potenziale",
+  p3_d: "Un percorso concreto: formare, automatizzare, guidare.",
+  diag_title: "Il diagnostico online",
+  diag_lead: "Rispondete nel modo più fedele possibile alla vostra realtà. Le risposte restano nel vostro browser: non viene inviato nulla.",
+  back: "Domanda precedente",
+  level: "Livello:",
+  path_title: "Percorso consigliato",
+  res_cta: "Prenota il diagnostico approfondito",
+  restart: "Rifate il diagnostico",
+  res_note: "Una videochiamata per verificare insieme questi risultati e stimare il percorso. Il riepilogo dei vostri punteggi viene allegato alla richiesta.",
+  offers_title: "Tre modi di lavorare insieme",
+  o1_t: "Formazione sull'IA",
+  o1_d: "Formazioni pratiche su Claude Code in primo luogo, ma anche su ChatGPT, DeepSeek e Gemini, costruite sui vostri documenti e sulle vostre attività anziché su esempi generici. Si parte sempre da un audit dei vostri usi dell'IA.",
+  o1_f1: "Da 14 a 28 ore",
+  o1_f2: `A distanza, in sessioni da 3${NB}h${NB}30`,
+  o1_f3: "Finanziabili tramite gli OPCO in Francia",
+  o1_f4: "Vedi un programma tipo",
+  o2_t: "Automazioni su misura",
+  o2_d: "Costruisco con voi l'agente o il flusso che elimina un'attività ripetitiva: monitoraggio, verbali delle riunioni, smistamento dei documenti, solleciti.",
+  o2_f2: "Esecuzione sui vostri computer, se necessario",
+  o2_f3: "Documentazione consegnata al team",
+  o3_t: "Gestione di progetti IA",
+  o3_d: "Imposto e guido i vostri progetti IA come Scrum Master e Product Owner: esigenze, priorità, governance, rilascio.",
+  o3_f1: `Certificato PSM${NB}I`,
+  o3_f3: "Jira: utilizzo e amministrazione",
+  o3_f4: "Governance dell'IA, AI Act, GDPR",
+  proof_title: "Risultati già ottenuti",
+  portrait_alt: "Ritratto di Mathieu Delloye",
+  about: "Da 13 anni guido progetti informatici in settori esigenti: nucleare, bancario, risorse umane. Ho ricoperto i ruoli di PMO, project manager, Scrum Master e Product Owner presso Adecco, Devoteam, Atos e Framatome. Da settembre 2026 lavoro in proprio e mi dedico alla formazione sull'intelligenza artificiale: Claude Code in primo luogo, ma anche ChatGPT, DeepSeek e Gemini. Formo i team, automatizzo ciò che va automatizzato e guido i progetti IA fino al rilascio.",
+  f1: "anni di gestione di progetti IT",
+  f2: "utenti trasferiti nella migrazione di una piattaforma",
+  f3: "di progetti IA, automazione e dati gestiti",
+  f3v: `600${NB}K€+`,
+  f4: "degli sprint consegnati nei tempi",
+  tr_title: "Formare e far adottare",
+  tr_lead: "Dagli operatori sul campo ai project manager, accompagno i team nell'adozione di nuovi strumenti, finché non li usano in autonomia.",
+  tr_p1: "dipendenti accompagnati nel passaggio a nuovi strumenti di lavoro: applicazioni per qualità, sicurezza e ingegneria, poi migrazione verso una nuova piattaforma, nell'industria nucleare.",
+  tr_p1o: "Strumenti: Devonway, piattaforma MIRAMAR",
+  tr_p2: "collaboratori accompagnati nell'uso dell'IA generativa, all'interno della community IA di un grande gruppo industriale, con workshop sugli assistenti Copilot.",
+  tr_p2r: "Risultato: 20 applicazioni di IA create dai team stessi.",
+  tr_p2o: "Strumenti: OpenAI, Azure OpenAI, Microsoft Copilot",
+  tr_p3: "clienti formati a creare le proprie applicazioni senza programmare e ad automatizzare le attività ripetitive.",
+  tr_p3o: "Strumenti: Power Platform, UiPath (automazione), Devonway",
+  tr_p4: "project manager formati ai metodi di gestione (budget, pianificazione, reporting) e al software di gestione dei progetti, come responsabile del PMO di un gruppo di servizi per le risorse umane.",
+  tr_p4o: "Strumenti: metodi PMO, software di gestione del portafoglio progetti",
+  ex_kicker: "Esempio di formazione",
+  ex_title: "Claude IA: analizzare, selezionare e rispondere alle gare d'appalto",
+  ex_format: `14${NB}h in 4 sessioni da 3${NB}h${NB}30, a distanza · audit preliminare dei vostri usi · finanziabile tramite gli OPCO in Francia`,
+  ex_s1t: "Capire Claude",
+  ex_s1: "Modelli, progetti, file, ricerca web: cosa sa fare lo strumento e dove si ferma.",
+  ex_s2t: "Casi pratici sui vostri documenti",
+  ex_s2: "Primi usi concreti fin dalla seconda sessione, compreso Claude Code in VS Code.",
+  ex_s3t: "Analizzare e selezionare",
+  ex_s3: "Leggere un bando di gara completo e decidere se partecipare, con un esercizio di 70 minuti.",
+  ex_s4t: "Scrivere e industrializzare",
+  ex_s4: "Blocchi di testo riutilizzabili, redazione dell'offerta tecnica, rilettura con gli occhi dell'acquirente.",
+  ex_kit: "Cosa resta ai partecipanti",
+  ex_k1: "Un quaderno di esercizi passo passo",
+  ex_k2: "Un caso pratico su un bando di gara",
+  ex_k3: "Competenze Claude pronte all'uso",
+  ex_k4: "Un kit di riferimento e un quiz di valutazione",
+  career_title: "Percorso",
+  m_where_t: "Dove",
+  m_where: "Con base vicino a Napoli, interventi a distanza in Francia e in Italia",
+  m_edu_t: "Formazione",
+  m_edu: `Master Internazionale in Intelligenza Artificiale, Rome Business School (in corso). Master e due titoli professionali RNCP di livello${NB}1 (quadro nazionale francese, classificazione precedente), ECEMA Lione`,
+  m_cert_t: "Certificazioni",
+  m_lang_t: "Lingue",
+  m_lang: "Francese (madrelingua), inglese C2, italiano C2, spagnolo B2",
+  y0: "da set. 2026",
+  y1: "ott. 2025 – set. 2026",
+  y2: "ott. 2019 – ott. 2025",
+  y3: "2017 – set. 2019",
+  y4: "2014 – set. 2017",
+  c0o: "Mathieu Delloye Consulting, libero professionista",
+  c0: "Formatore e consulente in IA. Formazioni su misura su Claude Code in primo luogo, ma anche su ChatGPT, DeepSeek e Gemini; audit degli usi e automazioni per le aziende.",
+  c1o: "Framatome, freelance",
+  c1: `Product Owner IA e soluzioni digitali, Scrum Master. Piattaforma aziendale di IA generativa (OpenAI, Azure OpenAI), 38 automazioni UiPath che riducono i test del 70${NB}%, agenti Microsoft Copilot.`,
+  c2o: "Atos, Framatome Digital Factory",
+  c2: `Senior Project Manager, Product Owner IA e Scrum Master. Oltre 50 applicazioni rilasciate, 3 team Scrum in parallelo (15 persone), +40${NB}% di produttività degli sviluppatori, 98${NB}% di soddisfazione.`,
+  c3o: "Devoteam, presso BPCE-IT",
+  c3: `Project manager, qualità e processi IT. Oltre 150 richieste ServiceNow automatizzate ogni mese (98${NB}% di soddisfazione), dashboard Power BI.`,
+  c4: `PMO di programma, poi PMO paese. Controllo finanziario di un portafoglio agile superiore a 30${NB}M€ all'anno.`,
+  c5o: "Framatome (ex Areva)",
+  c5: "Project manager tecnico. Reportistica quantitativa sull'avanzamento di operazioni di smantellamento.",
+  proj_title: "Progetti realizzati con Claude Code",
+  proj_lead: "Strumenti in produzione o in test, costruiti dall'inizio alla fine con Claude Code, agenti e connettori MCP.",
+  st_service: "In produzione",
+  st_cloud: "Distribuiti o in test",
+  np1_t: "Fabbrica di formazioni",
+  np1: "A partire dalla scheda dei bisogni del cliente, Claude Code produce il programma, una presentazione con i colori del marchio (fino a 81 slide), il quiz, il caso pratico, il quaderno di esercizi e la mappa dell'audit. La scheda arriva direttamente da Gmail.",
+  np1r: "7 presentazioni per i clienti, 51 documenti di formazione e 13 mappe di audit prodotti con un unico flusso di lavoro.",
+  np2: "Un giornale sulle novità dell'IA, pubblicato ogni giorno dal 22 ottobre 2026: edizioni in francese e in italiano, lettura audio, bozze e immagini per LinkedIn.",
+  np2r: "Edizioni pubblicate",
+  np2l: "Leggi il giornale",
+  np2s: "Claude Code, GitHub Pages, sintesi vocale",
+  np3_t: "Claude collegato ai vostri strumenti (MCP)",
+  np3: "Grazie ai connettori MCP, Claude legge le vostre email, recupera pagine web, archivia i documenti e distribuisce automazioni, senza copia e incolla.",
+  np3r: "Usato ogni giorno per la formazione e il monitoraggio.",
+  np4_t: "Siti animati a partire da un video",
+  np4: "Un breve video diventa una pagina che si anima allo scorrimento, anche in 3D: filigrane ritagliate, immagini ingrandite dall'IA, colori presi dal video.",
+  np4r: "Questo sito ne è l'esempio.",
+  np5_t: "Agenti distribuiti nel cloud",
+  np5a_t: "Monitoraggio YouTube sulla governance dell'IA",
+  np5a: "Seleziona i video pertinenti e invia un report via email ogni lunedì alle 7. Trigger.dev, stato: costruito.",
+  np5b_t: "Analisi competitiva della formazione IA in Italia",
+  np5b: "Calcolo dei punteggi e report eseguiti su Modal. Stato: prototipo.",
+  np5c: "Pipeline agentica di analisi delle offerte di lavoro. Firecrawl, Adzuna, Vercel, Trigger.dev, Modal.",
+  proto: `Primi prototipi: assistente RAG offline su un MacBook del 2013 (−77${NB}% di latenza misurata), dashboard ETL multi-sorgente, estensione Chrome di supporto allo studio, monitoraggio con n8n, orchestrazione di agenti Hermes / Solar Mini.`,
+  contact_title: "Parliamo del vostro diagnostico",
+  contact_lead: "Un primo colloquio in videochiamata per capire il vostro contesto e vedere se posso aiutarvi.",
+  footer_privacy: "Nessun cookie, nessuna statistica di traffico.",
+};
+
+const TR = { en: EN, it: IT };
+
 // Libellés des données (indicateurs, diagnostic) qui viennent en français.
 const DATA_EN = {
   "Cabinet de conseil en management": "Management consulting firm",
@@ -172,16 +324,8 @@ const DATA_EN = {
 const UI = {
   fr: {
     progress: (i, n) => `Question ${i} sur ${n}`,
-    updated: (d) => `Mis à jour le ${d}`,
-    sum_formations: (n) => [n, n > 1 ? "formations engagées" : "formation engagée"],
-    sum_hours: (n) => [`${n}${NB}h`, "de formation programmées"],
-    sum_audits: (n) => [n, n > 1 ? "audits réalisés" : "audit réalisé"],
-    sum_auto: (n, s) => [n, `automatisations conçues, dont ${s} en service`],
-    sum_daily: (n) => [n, "éditions du journal Daily AI"],
     daily_count: (n) => `${n} éditions publiées`,
-    now: (n, secteurs, audits) => `Depuis septembre 2026 : ${n} entreprise${n > 1 ? "s" : ""} accompagnée${n > 1 ? "s" : ""} (${secteurs}), ${audits} audit${audits > 1 ? "s" : ""} réalisé${audits > 1 ? "s" : ""}.`,
-    hours: (h, s) => `${h}${NB}h, ${s} séances`,
-    stage_of: (i, n) => `étape ${i} sur ${n}`,
+    now: (c) => `Depuis septembre 2026 : ${c.dossiers} entreprises en parcours de formation, ${c.audits_realises} audits réalisés et ${c.programmes_concus} programmes sur mesure conçus${c.formations_realisees ? `, ${c.formations_realisees} formations dispensées` : ""}.`,
     ring_axis: (label, v) => `${label}${NB}: ${v}${NB}%`,
     ring_idle: "Les anneaux se remplissent à mesure que vous répondez.",
     score: (v) => `(${v}/100)`,
@@ -191,22 +335,25 @@ const UI = {
   },
   en: {
     progress: (i, n) => `Question ${i} of ${n}`,
-    updated: (d) => `Updated ${d}`,
-    sum_formations: (n) => [n, n > 1 ? "training engagements" : "training engagement"],
-    sum_hours: (n) => [`${n}${NB}h`, "of training scheduled"],
-    sum_audits: (n) => [n, n > 1 ? "audits completed" : "audit completed"],
-    sum_auto: (n, s) => [n, `automations designed, ${s} in production`],
-    sum_daily: (n) => [n, "issues of the Daily AI journal"],
     daily_count: (n) => `${n} issues published`,
-    now: (n, secteurs, audits) => `Since September 2026: ${n} compan${n > 1 ? "ies" : "y"} supported (${secteurs}), ${audits} audit${audits > 1 ? "s" : ""} completed.`,
-    hours: (h, s) => `${h}${NB}h, ${s} sessions`,
-    stage_of: (i, n) => `stage ${i} of ${n}`,
+    now: (c) => `Since September 2026: ${c.dossiers} companies on a training path, ${c.audits_realises} audits completed and ${c.programmes_concus} tailored programmes designed${c.formations_realisees ? `, ${c.formations_realisees} courses delivered` : ""}.`,
     ring_axis: (label, v) => `${label}: ${v}%`,
     ring_idle: "The rings fill up as you answer.",
     score: (v) => `(${v}/100)`,
     mail_subject: "In-depth diagnostic request",
     note: (lvl, v, axes, path) => `Online diagnostic: level ${lvl} (${v}/100). ${axes}. Path: ${path}.`,
     locale: "en-GB",
+  },
+  it: {
+    progress: (i, n) => `Domanda ${i} di ${n}`,
+    daily_count: (n) => `${n} edizioni pubblicate`,
+    now: (c) => `Da settembre 2026: ${c.dossiers} aziende in un percorso di formazione, ${c.audits_realises} audit realizzati e ${c.programmes_concus} programmi su misura progettati${c.formations_realisees ? `, ${c.formations_realisees} formazioni erogate` : ""}.`,
+    ring_axis: (label, v) => `${label}: ${v}${NB}%`,
+    ring_idle: "Gli anelli si riempiono man mano che rispondete.",
+    score: (v) => `(${v}/100)`,
+    mail_subject: "Richiesta di diagnostico approfondito",
+    note: (lvl, v, axes, path) => `Diagnostico online: livello ${lvl} (${v}/100). ${axes}. Percorso: ${path}.`,
+    locale: "it-IT",
   },
 };
 
@@ -223,26 +370,24 @@ function storeLang(l) {
 
 export function lang() { return current; }
 export function ui() { return UI[current]; }
-export function dataLabel(fr) { return current === "en" ? (DATA_EN[fr] ?? fr) : fr; }
+export function dataLabel(fr) { return current === "en" ? (DATA_EN[fr] ?? fr) : fr; } // secteurs : plus affichés depuis la ligne CRM
 
 function apply() {
   document.documentElement.lang = current;
   document.querySelectorAll("[data-i18n]").forEach((el) => {
     const key = el.dataset.i18n;
     if (!frTexts.has(el)) frTexts.set(el, el.textContent);
-    el.textContent = current === "en" && EN[key] ? EN[key] : frTexts.get(el);
+    el.textContent = TR[current]?.[key] ?? frTexts.get(el);
   });
   document.querySelectorAll("[data-i18n-attr]").forEach((el) => {
     const [attr, key] = el.dataset.i18nAttr.split(":");
     if (!frAttrs.has(el)) frAttrs.set(el, el.getAttribute(attr));
-    el.setAttribute(attr, current === "en" && EN[key] ? EN[key] : frAttrs.get(el));
+    el.setAttribute(attr, TR[current]?.[key] ?? frAttrs.get(el));
   });
-  const t = document.getElementById("lang-toggle");
-  const other = current === "fr" ? "en" : "fr";
-  t.textContent = other.toUpperCase();
-  t.setAttribute("lang", other);
-  t.setAttribute("aria-label", other === "en" ? "Switch to English" : "Passer en français");
-  document.title = current === "en" ? "Mathieu Delloye Consulting · AI diagnostic" : "Mathieu Delloye Consulting · Diagnostic IA";
+  document.querySelectorAll(".lang-switch button").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.lang === current)));
+  const sw = document.querySelector(".lang-switch");
+  if (sw) sw.setAttribute("aria-label", { fr: "Langue", en: "Language", it: "Lingua" }[current]);
+  document.title = { fr: "Mathieu Delloye Consulting · Diagnostic IA", en: "Mathieu Delloye Consulting · AI diagnostic", it: "Mathieu Delloye Consulting · Diagnostico IA" }[current];
   document.dispatchEvent(new CustomEvent("langchange"));
 }
 
@@ -261,5 +406,5 @@ export function initI18n() {
   const wanted = [fromUrl, storedLang()].find((l) => LANGS.includes(l)) ?? "fr";
   current = wanted;
   apply();
-  document.getElementById("lang-toggle").addEventListener("click", () => setLang(current === "fr" ? "en" : "fr"));
+  document.querySelectorAll(".lang-switch button").forEach((b) => b.addEventListener("click", () => setLang(b.dataset.lang)));
 }
